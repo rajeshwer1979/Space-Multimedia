@@ -1,0 +1,74 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Untitled Document</title>
+<script>
+/*function deletes(k){
+	k.parentNode.parentNode.style.display = "none";
+}
+
+function edits(k){
+	k.parentNode.previousSibling.previousSibling.previousSibling.previousSibling.style.color = "#00f";
+	k.parentNode.parentNode.getElementsByTagName("h1")[0].setAttribute("contenteditable","true");
+}*/
+
+window.addEventListener("load",ff);
+
+
+function ff(event){
+	var div = document.createElement("div");
+	var h1 = document.createElement("h1");
+	var p = document.createElement("p");
+ var dd = document.createElement("div");
+
+	
+	h1.innerHTML = "Some thing";
+	p.innerHTML = "Description of small text";
+	div.setAttribute("class","post");
+	//div.addEventListener("click",ff1);
+	
+	p.addEventListener("click",ff3);
+	
+	div.appendChild(h1);
+	var sp = document.createElement("div");
+	sp.appendChild(p);
+	div.appendChild(sp);
+		
+		
+		var h31 = document.createElement("h3");
+		var h32 = document.createElement("h3");
+		var dummy = document.createElement("div");
+		dummy.setAttribute("style","clear:both");
+		h31.innerHTML = "Edit";
+		h32.innerHTML = "Delete";
+		dd.appendChild(h31);
+			dd.appendChild(h32);
+			dd.appendChild(dummy);	
+			div.appendChild(dd);
+	document.body.appendChild(div);
+}
+
+
+function ff1(event){
+//event.target.style.opacity = 0.25;
+event.target.style.backgroundColor = "#f00";
+}
+
+function ff3(event){
+	event.target.parentNode.parentNode.style.display = "none";
+}
+
+
+</script>
+<style>
+.post { border:1px solid #e2e2e2; padding:4px; margin:4px; }
+.post h1 { margin:0px; line-height:35px; font-family:Tahoma, Geneva, sans-serif; font-size:20px; color:#c00; }
+.post p { margin:0px; line-height:16px; font-family:Tahoma, Geneva, sans-serif; font-size:14px; margin-bottom:20px; }
+.post div h3 { float:left; padding-left:10px; padding-right:10px; margin:0px; line-height:30px; background-color:#c00; color:#FFF; font-size:12px; font-family:Tahoma, Geneva, sans-serif; font-weight:normal; margin-right:5px; cursor:pointer; }
+.post div h3:hover { background-color:#369; }
+</style>
+</head>
+<body>
+</body>
+</html>

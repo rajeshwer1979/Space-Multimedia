@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Inheritance</title>
+<script type="text/javascript">
+var animal = {
+eat: function(){
+alert("I am full");
+this.full= true;
+}
+}
+
+var rabbit ={
+jump: function (){
+alert("It will Jump");
+this.jump = true;
+}
+}
+
+rabbit.__proto__ =  animal;
+rabbit.eat();
+rabbit.jump();
+alert(rabbit.__proto__);
+</script>
+<script>
+/*var  x = {id:10}
+alert(x.__proto__); // [object Object]  inheritance*/
+
+</script>
+</head>
+
+<body>
+</body>
+</html>

@@ -1,0 +1,70 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<script src="app.js"></script>
+<title>Untitled Document</title>
+<style>
+ul.menubar{
+	padding:0;
+	margin:0;
+}
+ul.menubar>li{
+	float:left;
+	color:#333;
+	font-family:Tahoma, Geneva, sans-serif;
+	font-size:14px;
+	padding:4px;
+	padding-left:10px;
+	padding-right:10px;
+	list-style-type:none;
+	cursor:pointer;
+	position:relative;
+}
+
+ul.menubar>li ul{
+	position:absolute;
+	width:200px;
+	border:1px solid #e2e2e2;
+	top:25px;
+	display:none;
+}
+
+ul.menubar>li ul>li{
+	color:#333 !important;
+	line-height:25px;
+	border-bottom:1px solid #e2e2e2;
+}
+
+ul.menubar>li ul>li:last-child{
+
+	border-bottom:0px solid #e2e2e2;
+}
+</style>
+</head>
+
+<body onload="dosomething()">
+<ul class="menubar">
+<li onmouseover="overs(this,'#c00')" onmouseout="outs(this)" onclick="clicks(this)">About</li>
+<li onmouseover="overs(this,'#369')" onmouseout="outs(this)" onclick="clicks(this)">Services</li>
+<li onmouseover="overs(this,'#fc0')" onmouseout="outs(this)" onclick="clicks(this)">Modules
+<ul>
+<li>Test Menu Sub1</li>
+<li>Test Menu Sub2</li>
+<li>Test Menu Sub3</li>
+<li>Test Menu Sub4</li>
+</ul>
+</li>
+<li onmouseover="overs(this,'#f30')" onmouseout="outs(this)" onclick="clicks(this)">Manage
+<ul>
+<li>Test Menu Sub1</li>
+<li>Test Menu Sub2</li>
+<li>Test Menu Sub3</li>
+<li>Test Menu Sub4</li>
+</ul>
+</li>
+<li>List</li>
+<div style="clear:both"></div>
+</ul>
+</body>
+</html>
