@@ -1,0 +1,16 @@
+component life cycle
+
+// private
+
+initialize  - create raw material and appending order
+style  -   apply respective styling
+update -   update data based on the intended values.
+
+//public
+
+render   - display the component
+
+//naming set 
+
+var title (DOM)
+var _title (value for that DOM)
